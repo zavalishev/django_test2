@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Заголовок страницы</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'myapp/css/bootstrap.min.css' %}" type="text/css">
+ </head>
+ <body>
+
+<div class="jumbotron">
+    <div class="container">
+      <!-- <h1>{% include "myapp/includes/some.html" %}</h1> -->
+
+      {% block content %}
+      {% endblock %}
+      <p>
+          <a href="/simple" class="btn btn-success btn-lg">Главная страница</a>
+          <a href="/news" class="btn btn-primary btn-lg">Новости &raquo;</a>
+          <a href="/contact" class="btn btn-info btn-lg">Контакты </a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <img src="{% static 'myapp/image/mercedes.png' %}" class="img-thumbnail">
+    <hr>
+    &copy; Все права защищены 2020
+  </div>
+
+
+
+ </body>
+</html>
